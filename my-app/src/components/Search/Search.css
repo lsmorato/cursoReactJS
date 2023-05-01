@@ -1,0 +1,26 @@
+
+.searchform{
+	height:46px;
+	border: 1px solid rgba(255,255,255,.1);
+	overflow: hidden;
+	border-radius: 5px;
+   
+}
+
+.form-control{
+		width: calc(100% - 46px);
+		border: none;
+		background: #fff !important;
+		color: rgba(0,0,0,.7) !important;
+		font-size: 14px;
+        margin-right: 10px;
+	}
+	
+.btn-search{
+		width: 46px;
+		height: 46px;
+        margin-right: 10px;	
+      
+}
+
+	
