@@ -1,23 +1,28 @@
-import React from "react";
+import React, { Component } from "react";
+import NavItem from "../NavItem/NavItem";
 import './NavBar.css';
 import { Navbar } from 'react-bootstrap'
 
-function NavBar(){
-    return(
-        <Navbar className="menu navbar-dark bg-dark">
-            <ul className="navbar-nav mr-auto">
-                <li className="nav-item active">
-                <a className="nav-link" href="#">Item pai 01</a>
-                </li>
-                <li className="nav-item">
-                <a className="nav-link" href="#">Item pai 02</a>
-                </li>
-                <li className="nav-item">
-                <a className="nav-link" href="#">Item pai 03</a>
-                </li>
-            </ul>
-      </Navbar>
-    );
+
+class NavBar extends Component{
+    constructor(props){
+        super(props)
+        this.state ={
+            categories: ["Cultura","Gastronomia","Natureza"],
+        };
+    }
+
+    render(){
+        const menuItens = this.state.categories.map(category => <NavItem Name={category} Ref="#"/>)
+
+        return(
+            <Navbar className="menu navbar-dark bg-dark">
+                <ul className="navbar-nav mr-auto">
+                    {menuItens}
+                </ul>
+            </Navbar>
+        );
+    }
 }
 
 export default NavBar;
