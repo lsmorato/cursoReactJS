@@ -13,7 +13,17 @@ class NavBar extends Component{
         super(props)
         this.state ={
             categories: ["Cultura","Gastronomia","Natureza"],
+            produtos: []
         };
+    }
+
+    loadItemListContainer = () => {
+            this.setState({ produtos : [
+                {id: 1, nome: "monitor", preco: 150},
+                {id: 2, nome: "mouse", preco: 10},
+                {id: 3, nome: "teclado", preco: 7},
+                {id: 3, nome: "teclado diferente", preco: 40},
+            ]});
     }
 
     render(){
@@ -31,7 +41,7 @@ class NavBar extends Component{
                     </ul> 
                 </div>
                <Search/>
-               <CartWidget/>
+               <CartWidget itensContainer="5"/>
             </Navbar>
         );
     }
