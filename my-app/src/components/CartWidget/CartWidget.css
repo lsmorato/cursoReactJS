@@ -1,5 +1,10 @@
 .btn-shop{
-    width: 46px;
+    width: 90px;
     height: 46px;     
     margin-right: 10px;
+}
+
+.cart-total-itens{
+ margin-left: 10px;   
+ font-size: 20px;
 }
